@@ -1,78 +1,112 @@
-🧠 Universal Document Summarizer
-This project is a dual-mode web app that extracts and summarizes content from various document types using:
+# 🧠 Universal Document Summarizer
 
-✅ OpenAI GPT via Streamlit (file: summarize.py)
+This repository contains a Universal Document Summarizer that can summarize various types of documents using both **OpenAI** and **Azure OpenAI** models. It supports file types like **PDF, DOCX, TXT, JPG, PNG, and JPEG**.
 
-✅ Azure OpenAI via Flask and HTML templates (file: Summarize_Using_AzureOpenAI.py)
+### **📦 Table of Contents**
+    1.Introduction
+    2.Features
+    3.Setup Instructions
+    4.How It Works
+    5.File Details
+    6.Customization
+    7.Contributing
+    8.Contact Info
 
-It supports multiple document formats:
 
-📄 PDF
+### **🧑‍💻 Introduction**
+The **Universal Document Summarizer** allows you to upload different types of documents, extract their text, and generate concise summaries. The app uses OpenAI for summarization through Streamlit and Azure OpenAI via templates.
 
-📃 DOCX
+This application supports the following file types:
 
-📝 TXT
+    📝 **TXT** (Plain Text)
+    📄 **PDF**
+    📃 **DOCX** (Word Document)
+    🖼️ **Images** (JPG, PNG, JPEG)
 
-🖼️ Images (PNG, JPG, JPEG) using OCR
+### **🌟 Features**
+Extracts text from various file formats: PDF, DOCX, TXT, and Image Files (JPG, PNG, JPEG).
+Provides two summarization options:
 
-🚀 Features
-Extract text from PDFs, DOCX, TXT, and images
+    OpenAI GPT (via Streamlit)
+    Azure OpenAI GPT (via HTML templates)
 
-Summarize using OpenAI GPT (OpenAI or Azure OpenAI)
+Easy-to-use interface to upload files and generate summaries.
 
-OCR support with Tesseract for image text extraction
+### **🔧 Setup Instructions**
 
-Two UI options: Streamlit and Flask with HTML templates
+1. Clone the repository:
+`git clone https://github.com/your-username/universal-summarizer.git`
+`cd universal-summarizer`
 
-📁 File Structure
+2. Install dependencies:
+Install the required Python packages listed in requirements.txt:
+`pip install -r requirements.txt`
 
-📦 universal-summarizer
-├── summarize.py                     # Streamlit app using OpenAI
-├── Summarize_Using_AzureOpenAI.py  # Flask app using Azure OpenAI
-├── templates/
-│   └── index.html                  # HTML template for Azure app
-├── .env                            # Environment variables (not committed)
-├── requirements.txt                # Python dependencies
-└── README.md                       # Project readme
-⚙️ Setup Instructions
-1. Clone the Repository
-git clone https://github.com/your-username/universal-summarizer.git
-cd universal-summarizer
-2. Create a Virtual Environment (optional but recommended)
-python -m venv venv
-source venv/bin/activate    # On Windows: venv\Scripts\activate
-3. Install Dependencies
-pip install -r requirements.txt
-🔐 Environment Variables
-Create a .env file in the root directory with the following:
+3. Configure environment variables:
+Create a **.env** file in the project root and add the necessary API keys and endpoint configurations. Example:
 
-# OpenAI (for summarize.py)
-OPENAI_API_KEY=your-openai-api-key
+# OpenAI API Key (For GPT-based Summarization)
+OPENAI_API_KEY="your-openai-api-key"
 
-# Azure OpenAI (for Summarize_Using_AzureOpenAI.py)
-AZURE_OPENAI_KEY=your-azure-openai-key
-AZURE_OPENAI_ENDPOINT=https://your-resource-name.openai.azure.com/
-AZURE_OPENAI_VERSION=2023-03-15-preview
+# Azure OpenAI API Configuration
+AZURE_OPENAI_KEY="your-azure-openai-api-key"
+AZURE_OPENAI_ENDPOINT="https://your-azure-openai-endpoint"
+AZURE_OPENAI_VERSION="2023-03-15-preview"
 
-▶️ Running the Apps
-Option 1: OpenAI with Streamlit
-streamlit run summarize.py
+4. Run the app:
+To run the application, use the following commands:
 
-Option 2: Azure OpenAI with Flask + HTML
-python Summarize_Using_AzureOpenAI.py
-Then open http://localhost:5000 in your browser.
+    For OpenAI-based Summarizer (Streamlit):
+        `streamlit run summarize.py`
+    For Azure OpenAI-based Summarizer (HTML Templates):
+        `python Summarize_Using_AzureOpenAI.py`
 
-📸 Example Use Cases
-Extracting insights from research papers
+### **🧩 How It Works**
+The application operates in two main phases:
 
-Summarizing meeting transcripts or scanned notes
+1. Text Extraction:
+It extracts text from uploaded documents using different methods based on the file type:
 
-Getting a brief from long contracts or proposals
+    TXT: Directly reads the text from the file.
+    DOCX: Uses python-docx to parse Word files.
+    PDF: Uses PyMuPDF to extract text from PDF files.
+    Image: Uses Tesseract OCR to extract text from image files (JPG, PNG, JPEG).
 
-📂 Supported File Types
-Type	Support
-PDF	✅ via PyMuPDF
-DOCX	✅ via python-docx
-TXT	✅ via direct decoding
-PNG, JPG, JPEG	✅ via Tesseract OCR
+2. Summarization:
+Once the text is extracted, it is passed to the summarization model:
 
+    **OpenAI GPT:** Uses OpenAI's GPT model to generate a summary.
+    **Azure OpenAI GPT:** Uses Azure OpenAI's GPT model for summarization.
+
+### **📂 File Details**
+**1. summarize.py:**
+This file sets up a Streamlit interface for summarization using OpenAI GPT.
+It allows users to upload files, view the extracted text, and then generate a summary.
+
+**2. Summarize_Using_AzureOpenAI.py:**
+This script is for summarization using Azure OpenAI GPT through templates.
+It provides a web interface with HTML templates for summarizing uploaded documents.
+
+### **⚙️ Customization**
+The application allows for customization in various parts:
+
+1. Summarization Settings:
+You can modify the following parameters to control the summarization behavior:
+
+**Temperature:** Controls the randomness of the summary (higher = more creative).
+
+**Max tokens:** Controls the length of the summary.
+
+**Model Type:** You can switch between different models (e.g., GPT-3.5, GPT-4) based on your access.
+
+2. Text Extraction:
+You can adjust or add new methods to extract text from other document types if needed.
+
+### **🎉 Contributing**
+We welcome contributions! Whether it's fixing bugs, adding features, or improving documentation, feel free to open an issue or submit a pull request.
+
+Steps to contribute:
+    Fork the repository.
+    Create a new branch.
+    Make your changes and commit them.
+    Submit a pull request with a description of the changes.
