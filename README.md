@@ -2,7 +2,6 @@
 
 This repository contains a **Universal Document Summarizer** that can summarize various types of documents using both **OpenAI** and **Azure OpenAI** models. It supports file types like **PDF**, **DOCX**, **TXT**, **JPG**, **PNG**, and **JPEG**.
 
----
 
 ## 📦 Table of Contents
 
@@ -15,7 +14,6 @@ This repository contains a **Universal Document Summarizer** that can summarize 
 7. [Contributing](#-contributing)
 8. [Contact Info](#-contact-info)
 
----
 
 ## 🧑‍💻 Introduction
 
@@ -31,7 +29,6 @@ The **Universal Document Summarizer** allows you to upload different types of do
 * 📃 DOCX (Word Document)
 * 🖼️ Images (JPG, PNG, JPEG)
 
----
 
 ## 🌟 Features
 
@@ -42,7 +39,6 @@ The **Universal Document Summarizer** allows you to upload different types of do
   * Azure OpenAI GPT (HTML templates)
 * 👡 Simple and intuitive interface
 
----
 
 ## 🔧 Setup Instructions
 
@@ -87,7 +83,6 @@ AZURE_OPENAI_VERSION="2023-03-15-preview"
   python Summarize_Using_AzureOpenAI.py
   ```
 
----
 
 ## 🧹 How It Works
 
@@ -107,7 +102,6 @@ Once extracted, the text is summarized using:
 * **OpenAI GPT** (via OpenAI API)
 * **Azure OpenAI GPT** (via Azure deployment)
 
----
 
 ## 📂 File Details
 
@@ -121,7 +115,6 @@ Once extracted, the text is summarized using:
 * HTML template-based summarization using Azure OpenAI
 * Flask-based file upload and summarization logic
 
----
 
 ## ⚙️ Customization
 
@@ -141,7 +134,6 @@ Extend extraction logic for:
 * Custom OCR pipelines
 * Language-specific adjustments
 
----
 
 ## 🎉 Contributing
 
@@ -159,10 +151,3 @@ Feel free to submit a pull request for:
 3. Commit your changes
 4. Open a pull request
 
----
-
-## 📧 Contact Info
-
-* **Author**: Sowmiya Vasu
-
----
