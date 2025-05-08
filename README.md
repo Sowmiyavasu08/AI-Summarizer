@@ -15,7 +15,7 @@ This repository contains a **Universal Document Summarizer** that can summarize 
 8. [Contact Info](#contact-info)
 
 
-## 🧑‍💻 Introduction
+ 🧑‍💻 ## Introduction
 
 The **Universal Document Summarizer** allows you to upload different types of documents, extract their text, and generate concise summaries. It uses:
 
