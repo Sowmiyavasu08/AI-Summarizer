@@ -86,7 +86,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-
-# git remote add origin https://github.com/Sowmiyavasu08/AI-Summarizer.git
-# git branch -M main
-# git push -u origin main
