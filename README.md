@@ -1,80 +1,78 @@
 🧠 Universal Document Summarizer
+This project is a dual-mode web app that extracts and summarizes content from various document types using:
 
-Universal Document Summarizer is an AI-powered web application that uses OpenAI GPT and Azure OpenAI to extract and summarize content from various document formats including:
+✅ OpenAI GPT via Streamlit (file: summarize.py)
 
-* 📄 PDF
-* 📃 DOCX
-* 📝 TXT
-* 🖼️ PNG, JPG, JPEG (via OCR using Tesseract)
+✅ Azure OpenAI via Flask and HTML templates (file: Summarize_Using_AzureOpenAI.py)
 
-The app provides two versions:
+It supports multiple document formats:
 
-* Streamlit interface using OpenAI – summarize.py
+📄 PDF
 
-* HTML template interface using Azure OpenAI – Summarize_Using_AzureOpenAI.py
+📃 DOCX
 
-✨ Features
-✅ Extract text from PDF, DOCX, TXT, and Image files
+📝 TXT
 
-✅ Summarize documents using OpenAI or Azure OpenAI GPT models
+🖼️ Images (PNG, JPG, JPEG) using OCR
 
-✅ OCR support for images
+🚀 Features
+Extract text from PDFs, DOCX, TXT, and images
 
-✅ User-friendly UI with Streamlit or HTML templates
+Summarize using OpenAI GPT (OpenAI or Azure OpenAI)
 
-✅ Modular and clean codebase
+OCR support with Tesseract for image text extraction
+
+Two UI options: Streamlit and Flask with HTML templates
 
 📁 File Structure
-.
-├── summarize.py                      # Streamlit app using OpenAI
-├── Summarize_Using_AzureOpenAI.py   # Flask app using Azure OpenAI + templates
-├── templates/
-│   └── summarize.html               # HTML template for Azure OpenAI version
-├── .env                             # Store environment variables securely
-├── requirements.txt                 # Python dependencies
-└── README.md                        # Project documentation
 
+📦 universal-summarizer
+├── summarize.py                     # Streamlit app using OpenAI
+├── Summarize_Using_AzureOpenAI.py  # Flask app using Azure OpenAI
+├── templates/
+│   └── index.html                  # HTML template for Azure app
+├── .env                            # Environment variables (not committed)
+├── requirements.txt                # Python dependencies
+└── README.md                       # Project readme
 ⚙️ Setup Instructions
 1. Clone the Repository
-git clone https://github.com/your-username/universal-document-summarizer.git
-cd universal-document-summarizer
-
-2. Install Dependencies
-It's recommended to use a virtual environment:
+git clone https://github.com/your-username/universal-summarizer.git
+cd universal-summarizer
+2. Create a Virtual Environment (optional but recommended)
 python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
+source venv/bin/activate    # On Windows: venv\Scripts\activate
+3. Install Dependencies
 pip install -r requirements.txt
+🔐 Environment Variables
+Create a .env file in the root directory with the following:
 
-3. Configure Environment Variables
-Create a .env file in the root directory and add:
+# OpenAI (for summarize.py)
+OPENAI_API_KEY=your-openai-api-key
 
-For OpenAI:
-OPENAI_API_KEY=your_openai_key_here
-For Azure OpenAI:
-AZURE_OPENAI_KEY=your_azure_openai_key_here
+# Azure OpenAI (for Summarize_Using_AzureOpenAI.py)
+AZURE_OPENAI_KEY=your-azure-openai-key
 AZURE_OPENAI_ENDPOINT=https://your-resource-name.openai.azure.com/
 AZURE_OPENAI_VERSION=2023-03-15-preview
 
 ▶️ Running the Apps
-🔹 OpenAI (Streamlit)
+Option 1: OpenAI with Streamlit
 streamlit run summarize.py
-This version uses standard OpenAI GPT to process and summarize documents via a sleek Streamlit interface.
 
-🔹 Azure OpenAI (Flask + HTML Template)
+Option 2: Azure OpenAI with Flask + HTML
 python Summarize_Using_AzureOpenAI.py
-Navigate to http://127.0.0.1:5000 in your browser. This version uses Azure OpenAI via a Flask backend with an HTML-based frontend.
+Then open http://localhost:5000 in your browser.
 
-📦 Supported File Types
-| Type  | Extension               | Notes                         |
-| ----- | ----------------------- | ----------------------------- |
-| Text  | `.txt`                  | UTF-8 encoded                 |
-| PDF   | `.pdf`                  | Extracted using PyMuPDF       |
-| Word  | `.docx`                 | Extracted using `python-docx` |
-| Image | `.png`, `.jpg`, `.jpeg` | OCR with Tesseract            |
+📸 Example Use Cases
+Extracting insights from research papers
 
+Summarizing meeting transcripts or scanned notes
 
-🛡️ Security Tip
-Never hardcode API keys. Use .env and python-dotenv to load keys securely.
+Getting a brief from long contracts or proposals
 
-📬 Contact
-For suggestions or issues, open an issue.
+📂 Supported File Types
+Type	Support
+PDF	✅ via PyMuPDF
+DOCX	✅ via python-docx
+TXT	✅ via direct decoding
+PNG, JPG, JPEG	✅ via Tesseract OCR
+
