@@ -12,7 +12,6 @@ This repository contains a **Universal Document Summarizer** that can summarize 
 5. [File Details](#-file-details)
 6. [Customization](#-customization)
 7. [Contributing](#-contributing)
-8. [Contact Info](#-contact-info)
 
 
 ## 🧑‍💻 Introduction
