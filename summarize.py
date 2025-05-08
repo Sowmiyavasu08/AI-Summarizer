@@ -11,7 +11,7 @@ load_dotenv()
 
 # Set your OpenAI API key
 openai.api_key = os.getenv("OPENAI_API_KEY")
-
+openai.api_type="openai"
 
 # Summarize function using OpenAI
 def generate_summary(text):
@@ -27,6 +27,10 @@ def generate_summary(text):
         temperature=0.5,
         max_tokens=300
     )
+    print("response start**********")
+    print(response)
+    print("response end**********")
+
     return response.choices[0].message.content.strip()
 
 # Extract text from .docx
@@ -81,3 +85,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# git remote add origin https://github.com/Sowmiyavasu08/AI-Summarizer.git
+# git branch -M main
+# git push -u origin main

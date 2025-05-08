@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Summarizer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+    <h1 class="mb-4">🧠 Universal Document Summarizer</h1>
+    <form method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <input class="form-control" type="file" name="document" required>
+        </div>
+        <button class="btn btn-primary" type="submit" name="extract">Extract</button>
+        <button class="btn btn-success" type="submit" name="summarize">Summarize</button>
+    </form>
+
+    {% if extracted_text %}
+        <hr>
+        <h4>📄 Extracted Text</h4>
+        <textarea class="form-control" rows="10">{{ extracted_text }}</textarea>
+    {% endif %}
+
+    {% if summary %}
+        <hr>
+        <h4>📝 Summary</h4>
+        <div class="alert alert-info">{{ summary }}</div>
+    {% endif %}
+</body>
+</html>

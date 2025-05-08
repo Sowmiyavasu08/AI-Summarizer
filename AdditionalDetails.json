@@ -1,0 +1,6 @@
+{
+    "title": "AI Summarizer",
+  "description": "An AI-powered application that generates concise summaries for any type of text input, including articles, reports, and documents. Built using Python and Streamlit, and powered by OpenAI's language models via Azure OpenAI service, the tool efficiently extracts key information to produce meaningful summaries. Ideal for knowledge workers, students, and professionals who need quick insights from large volumes of content.",
+    "tech": ["Python", "OpenAI", "AzureOpenAI","Streamlit"],
+    "link": "https://github.com/Sowmiyavasu08/AI-Summarizer"
+  }
