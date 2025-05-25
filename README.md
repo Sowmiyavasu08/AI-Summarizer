@@ -6,12 +6,13 @@ This repository contains a **Universal Document Summarizer** that can summarize 
 ### 📦 Table of Contents
 
 1. [Introduction](#-introduction)
-2. [Features](#-features)
-3. [Setup Instructions](#-setup-instructions)
-4. [How It Works](#-how-it-works)
-5. [File Details](#-file-details)
-6. [Customization](#-customization)
-7. [Contributing](#-contributing)
+2. [Screenshots](#-screenshots)
+3. [Features](#-features)
+4. [Setup Instructions](#-setup-instructions)
+5. [How It Works](#-how-it-works)
+6. [File Details](#-file-details)
+7. [Customization](#-customization)
+8. [Contributing](#-contributing)
 
 
 ## 🧑‍💻 Introduction
