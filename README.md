@@ -29,7 +29,7 @@ Here are some screenshots of the app in action:
 
 ### Streamlit UI for Text and File Upload
 
-![Streamlit Text Upload](assets/groq_summarizer_second.png)
+![Streamlit Text Upload](assets/groq_summarizer_home.png)
 
 ### Streamlit UI Showing Summary Output
 
