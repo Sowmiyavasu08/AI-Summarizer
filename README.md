@@ -25,7 +25,7 @@ The **Universal Document Summarizer** allows you to upload different types of do
 
 ## 📸 Screenshots
 
-Here are some screenshots of the app in action:
+Here are some screenshots of the app in action(completely free source):
 
 ### Streamlit UI for Text and File Upload
 
