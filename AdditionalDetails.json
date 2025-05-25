@@ -1,6 +1,6 @@
 {
   "title": "AI Summarizer",
-  "description": "AI Summarizer is an AI-powered application designed to generate concise summaries from various document formats including PDFs, DOCX, TXT, PNG, JPG, and JPEG. It offers dual summarization options using OpenAI GPT models and Groq AI's Meta LLaMA 4 model via Groq API, alongside Azure OpenAI integration. Built with Python, Streamlit, and Flask, this tool helps knowledge workers, students, and professionals quickly extract key insights from large volumes of content by leveraging advanced natural language processing and OCR techniques for accurate, context-aware summaries.",
+  "description": "AI Summarizer is an AI-powered application designed to generate concise summaries from various document formats including PDFs, DOCX, TXT, PNG, JPG, and JPEG. It offers dual summarization options using OpenAI GPT models and Groq AI's Meta LLaMA 4 model via Groq API, which is completely free. The tool also includes Azure OpenAI integration. Built with Python, Streamlit, and Flask, this tool helps knowledge workers, students, and professionals quickly extract key insights from large volumes of content by leveraging advanced natural language processing and OCR techniques for accurate, context-aware summaries.",
   "tech": ["Python", "OpenAI", "AzureOpenAI", "GroqAI", "Streamlit", "Flask", "PyMuPDF", "Tesseract"],
   "link": "https://github.com/Sowmiyavasu08/AI-Summarizer"
 }
