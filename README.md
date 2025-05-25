@@ -20,6 +20,20 @@ The **Universal Document Summarizer** allows you to upload different types of do
 
 * **OpenAI GPT** via Streamlit
 * **Azure OpenAI** via HTML templates
+* **GroqAI Meta LLaMA 4** via Streamlit for advanced summarization
+
+## 📸 Screenshots
+
+Here are some screenshots of the app in action:
+
+### Streamlit UI for Text and File Upload
+
+![Streamlit Text Upload](assets/groq_summarizer_second.png)
+
+### Streamlit UI Showing Summary Output
+
+![Streamlit Summary Output](assets/groq_summarizer_second.png)
+
 
 **Supported file types**:
 
@@ -36,6 +50,7 @@ The **Universal Document Summarizer** allows you to upload different types of do
 
   * OpenAI GPT (Streamlit UI)
   * Azure OpenAI GPT (HTML templates)
+  * GroqAI Meta LLaMA 4 (Streamlit UI)  
 * 👡 Simple and intuitive interface
 
 
@@ -66,14 +81,18 @@ OPENAI_API_KEY="your-openai-api-key"
 AZURE_OPENAI_KEY="your-azure-openai-api-key"
 AZURE_OPENAI_ENDPOINT="https://your-azure-openai-endpoint"
 AZURE_OPENAI_VERSION="2023-03-15-preview"
+
+# GroqAI API Key (for Meta LLaMA 4)
+GROQ_API_KEY="your-groq-api-key"
 ```
 
 ### 4. Run the Application
 
-* **Streamlit (OpenAI GPT)**:
+* **Streamlit (OpenAI GPT or GroqAI LLaMA 4)**:
 
   ```bash
   streamlit run summarize.py
+  streamlit run summarize_using_groq.py
   ```
 
 * **Flask (Azure OpenAI)**:
@@ -81,7 +100,6 @@ AZURE_OPENAI_VERSION="2023-03-15-preview"
   ```bash
   python Summarize_Using_AzureOpenAI.py
   ```
-
 
 ## 🧹 How It Works
 
@@ -100,6 +118,7 @@ Once extracted, the text is summarized using:
 
 * **OpenAI GPT** (via OpenAI API)
 * **Azure OpenAI GPT** (via Azure deployment)
+* **GroqAI Meta LLaMA 4** (via Groq API)
 
 
 ## 📂 File Details
@@ -114,6 +133,9 @@ Once extracted, the text is summarized using:
 * HTML template-based summarization using Azure OpenAI
 * Flask-based file upload and summarization logic
 
+### `summarize_using_groq.py`
+* Streamlit app for summarizing with GroqAI
+* Upload documents/Give Text → Extract text → Generate summary
 
 ## ⚙️ Customization
 
@@ -123,7 +145,7 @@ You can configure:
 
 * `temperature`: Controls creativity
 * `max_tokens`: Controls summary length
-* `model`: e.g., GPT-3.5, GPT-4
+* `model`: e.g., GPT-3.5, GPT-4 or Meta LLaMA 4
 
 ### Text Extraction
 

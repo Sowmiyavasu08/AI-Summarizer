@@ -1,7 +1,9 @@
-openai 
 streamlit 
 python-docx 
 PyMuPDF 
 pytesseract 
 Pillow
 python-dotenv
+
+openai 
+groq
